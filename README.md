@@ -56,6 +56,7 @@ Use "bugboss [command] --help" for more information about a command.
 
 - [ ] Add better documentation in README
 - [ ] Provide Installer
+- [ ] Improve code
 - [ ] Authentication mechanism
 - [ ] More features and enhancements
 

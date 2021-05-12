@@ -48,10 +48,10 @@ func GetUserBugs(userEmail string) {
 	}
 
 	json.Unmarshal([]byte(body), &bugs)
-	formatData(bugs)
+	formatUserBugs(bugs)
 }
 
-func formatData(bugs Bugs) {
+func formatUserBugs(bugs Bugs) {
 	data := [][]string{}
 	for i := 0; i < len(bugs.Bugs); i++ {
 		bug := []string{strconv.Itoa(bugs.Bugs[i].BugID), bugs.Bugs[i].Summary, bugs.Bugs[i].Severity, bugs.Bugs[i].Priority, bugs.Bugs[i].AssignedTo, bugs.Bugs[i].CreatedBy, bugs.Bugs[i].QAContact}
