@@ -48,6 +48,7 @@ Flags:
       --bugzilla-url string   bugzilla Url
       --config string         config file (default is $HOME/.bugboss.yaml)
   -h, --help                  help for bugboss
+  -w, --ui                    enable webui output
 
 Use "bugboss [command] --help" for more information about a command.
 ```

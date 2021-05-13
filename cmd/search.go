@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/slashpai/bugboss/webui"
 	"github.com/spf13/cobra"
 )
 
@@ -55,4 +56,7 @@ func formatBug(bugs Bugs) {
 	}
 	header := []string{"BugID", "Summary", "Severity", "Priority", "Assigned To", "Created By", "QA Contact", "Status", "Last Updated"}
 	RenderTable(data, header)
+	if uiNeeded {
+		webui.ShowUI(data, header)
+	}
 }

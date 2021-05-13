@@ -8,6 +8,8 @@ import (
 	"net/http"
 	"strconv"
 
+	"github.com/slashpai/bugboss/webui"
+
 	"github.com/spf13/cobra"
 )
 
@@ -35,7 +37,6 @@ func GetUserBugs(userEmail string) {
 	apiEndpoint := GetBugzillaEndpoint()
 
 	url := fmt.Sprintf("%s%s%s", apiEndpoint, "/bug?assigned_to=", userEmail)
-	// fmt.Println(url)
 
 	res, err := http.Get(url)
 	if err != nil {
@@ -59,4 +60,7 @@ func formatUserBugs(bugs Bugs) {
 	}
 	header := []string{"BugID", "Summary", "Severity", "Priority", "Assigned To", "Created By", "QA Contact"}
 	RenderTable(data, header)
+	if uiNeeded {
+		webui.ShowUI(data, header)
+	}
 }

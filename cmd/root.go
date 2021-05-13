@@ -12,6 +12,7 @@ import (
 
 var cfgFile string
 var bugzillaURL string
+var uiNeeded bool
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -31,7 +32,7 @@ func init() {
 	cobra.OnInitialize(initConfig)
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.bugboss.yaml)")
 	rootCmd.PersistentFlags().StringVar(&bugzillaURL, "bugzilla-url", "", "bugzilla Url")
-
+	rootCmd.PersistentFlags().BoolVarP(&uiNeeded, "ui", "w", false, "enable webui output")
 }
 
 // initConfig reads in config file
