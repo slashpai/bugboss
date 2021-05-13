@@ -9,6 +9,8 @@
 
 - [x] Get bugs assigned to a user by passing user `email id`
 
+- [x] Option to view output in webui
+
 ## Config file format
 
 Create a config file at `home` directory named `.bugboss.yaml`. If using a different path or file name you need to pass it in config option.
