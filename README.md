@@ -20,12 +20,8 @@ bugzilla:
   url: bugzilla.redhat.com
 ```
 
-## Download executable
 
-Till a better way added included the executable [bugboss](bugboss) in the repo
-
-
-## Build executable yourself
+## Build executable
 
 ```bash
 gi clone https://github.com/slashpai/bugboss.git
