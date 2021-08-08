@@ -18,7 +18,7 @@ var uiNeeded bool
 var rootCmd = &cobra.Command{
 	Use:   "bugboss",
 	Short: "A bugzilla cli written in go",
-	Long: `Buzilla cli to help to interact with bugzilla.
+	Long: `Bugzilla cli to help to interact with bugzilla.
 You can quickly search a bugzilla issue instead of waiting for web UI to load`,
 }
 
